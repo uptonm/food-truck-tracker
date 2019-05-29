@@ -1,0 +1,29 @@
+{
+  "name": "web-dev-final-project",
+  "version": "1.0.0",
+  "description": "Final Project for Web Development Course at Wentworth Institute of Technology",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uptonm/web-dev-final-project.git"
+  },
+  "author": "Michael Upton (uptonm)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uptonm/web-dev-final-project/issues"
+  },
+  "homepage": "https://github.com/uptonm/web-dev-final-project#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "colors": "^1.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "mongoose": "^5.5.11",
+    "morgan": "^1.9.1"
+  }
+}
