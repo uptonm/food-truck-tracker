@@ -1,5 +1,6 @@
 const logger = require('./services/loggerService');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
@@ -7,6 +8,8 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+require('./models/user');
+require('./services/jwtAuth');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -22,4 +25,10 @@ app.use((err, req, res, next) => {
   res.json({ error: err });
 });
 
+app.use('/auth', require('./routes/auth.routes'));
+app.use(
+  '/api',
+  passport.authenticate('jwt', { session: false }),
+  require('./routes/user.routes')
+);
 module.exports = app;
