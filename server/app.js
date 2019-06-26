@@ -9,6 +9,7 @@ require('dotenv').config();
 
 const app = express();
 require('./models/user');
+require('./models/foodTruck');
 require('./services/jwtAuth');
 
 app.use(bodyParser.urlencoded({ extended: true }));
