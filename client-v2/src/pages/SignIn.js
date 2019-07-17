@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/auth.css';
 
 class SignIn extends Component {
+  state = {
+    email: '',
+    password: ''
+  };
   render() {
     return (
       <div className="login-container">
@@ -14,6 +18,10 @@ class SignIn extends Component {
             type="email"
             className="login-input"
             placeholder="Email"
+            value={this.state.email}
+            onChange={e =>
+              this.setState({ ...this.state, email: e.target.value })
+            }
             required
           />
           <input
@@ -21,6 +29,10 @@ class SignIn extends Component {
             type="password"
             className="login-input"
             placeholder="Password"
+            value={this.state.password}
+            onChange={e =>
+              this.setState({ ...this.state, password: e.target.value })
+            }
             required
           />
           <div className="btn-bar">
