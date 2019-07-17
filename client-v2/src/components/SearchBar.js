@@ -7,7 +7,7 @@ import SearchIcon from './SearchIcon';
 class SearchBar extends Component {
   state = {
     isFocused: false,
-    searchInput: 'B',
+    searchInput: '',
     results: [],
     filteredResults: []
   };
@@ -18,16 +18,20 @@ class SearchBar extends Component {
 
   renderResults() {
     if (this.state.searchInput.length > 0 && this.state.results.length > 0) {
-      return this.state.results.map((result, index) => {
-        return (
-          <li className="searchBar-result" key={index}>
-            <h1 className="searchBar-result-info">
-              <span className="searchBar-result-name">{result.name}</span> -{' '}
-              {result.location}
-            </h1>
-          </li>
-        );
-      });
+      return (
+        <ul className="searchBar-results">
+          {this.state.filteredResults.map((result, index) => {
+            return (
+              <li className="searchBar-result" key={index}>
+                <h1 className="searchBar-result-info">
+                  <span className="searchBar-result-name">{result.name}</span> -{' '}
+                  {result.location}
+                </h1>
+              </li>
+            );
+          })}
+        </ul>
+      );
     }
   }
 
@@ -67,7 +71,7 @@ class SearchBar extends Component {
             onBlur={() => this.setState({ ...this.state, isFocused: false })}
           />
         </div>
-        <ul className="searchBar-results">{this.renderResults()}</ul>
+        {this.renderResults()}
       </div>
     );
   }

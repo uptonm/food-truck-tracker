@@ -1,3 +1,7 @@
+body,
+html {
+  background: linear-gradient(-45deg, #5333ff, #1e049a) fixed no-repeat;
+}
 .jumbotron {
   background: url('../images/splashscreen.jpg') center center / cover no-repeat;
   margin: 0;
@@ -5,7 +9,5 @@
   height: 80vh;
   width: 100vw;
   position: relative;
-}
-
-.jumbotron .searchBar {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
