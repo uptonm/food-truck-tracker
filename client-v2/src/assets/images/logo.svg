@@ -1,0 +1,16 @@
+<svg width="403px" height="45px" viewBox="0 0 403 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop---Log-In" transform="translate(-108.000000, -21.000000)">
+            <g id="logo_vertical" transform="translate(108.000000, 21.000000)">
+                <g id="Symbol" transform="translate(0.461654, 0.000000)">
+                    <ellipse id="Oval" fill="#FFBA3F" cx="46.7729323" cy="22.2286325" rx="22.3037594" ry="22.2286325"></ellipse>
+                    <ellipse id="Oval-Copy" fill="#5333FF" cx="22.3037594" cy="22.2286325" rx="22.3037594" ry="22.2286325"></ellipse>
+                    <path d="M34.5383459,40.7884615 C28.4730075,36.8197322 24.4691729,29.9892071 24.4691729,22.2286321 C24.4691729,14.4680571 28.4730075,7.63753195 34.5383459,3.66880342 C40.6036836,7.63753104 44.6075188,14.4680566 44.6075188,22.2286321 C44.6075188,29.9892076 40.6036836,36.8197331 34.5383446,40.7884615 L34.5383459,40.7884615 Z" id="Path" fill="#1C049A"></path>
+                </g>
+            </g>
+            <text id="Food-Truck-Tracker" font-family="ProximaNovaT-Thin, Proxima Nova" font-size="40" font-style="condensed" font-weight="300" fill="#000000">
+                <tspan x="185.3" y="56">Food Truck Tracker</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
