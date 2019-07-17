@@ -18,12 +18,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: space-evenly;
-  height: 50vh;
+  height: 55vh;
   width: 500px;
   border-radius: 1rem;
   border: 1px solid #5333ff;
   background-color: white;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.3);
+  padding: 1rem;
 }
 
 .login-header {
