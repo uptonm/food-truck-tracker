@@ -11,13 +11,21 @@ const FoodTruckSchema = new Schema({
     type: String,
     required: true
   },
+  website: {
+    type: String,
+    required: false
+  },
+  menu: {
+    type: String,
+    required: false
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
   location: {
     type: GeoLocation,
-    required: true
+    required: false
   }
 });
 

@@ -6,5 +6,7 @@ const router = express.Router();
 
 //Displays information tailored according to the logged in user
 router.get('/user', actions.getUser);
+router.put('/user', actions.putUser);
+router.delete('/user', actions.deleteUser);
 
 module.exports = router;

@@ -32,4 +32,9 @@ app.use(
   passport.authenticate('jwt', { session: false }),
   require('./routes/user.routes')
 );
+app.use(
+  '/api',
+  passport.authenticate('jwt', { session: false }),
+  require('./routes/foodTruck.routes')
+);
 module.exports = app;
