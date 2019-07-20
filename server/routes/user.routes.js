@@ -9,4 +9,6 @@ router.get('/user', actions.getUser);
 router.put('/user', actions.putUser);
 router.delete('/user', actions.deleteUser);
 
+router.put('/user/location', actions.updateLocation);
+
 module.exports = router;

@@ -26,15 +26,11 @@ app.use((err, req, res, next) => {
   res.json({ error: err });
 });
 
+app.use('/api', require('./routes/search.routes')); // search routes do not require authentication
 app.use('/auth', require('./routes/auth.routes'));
 app.use(
   '/api',
   passport.authenticate('jwt', { session: false }),
   require('./routes/user.routes')
-);
-app.use(
-  '/api',
-  passport.authenticate('jwt', { session: false }),
-  require('./routes/foodTruck.routes')
 );
 module.exports = app;
