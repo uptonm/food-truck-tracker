@@ -26,6 +26,7 @@ app.use((err, req, res, next) => {
   res.json({ error: err });
 });
 
+app.use('/api', require('./routes/search.routes')); // search routes do not require authentication
 app.use('/auth', require('./routes/auth.routes'));
 app.use(
   '/api',
