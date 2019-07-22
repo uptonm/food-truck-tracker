@@ -12,9 +12,9 @@ class SearchBar extends Component {
     filteredResults: []
   };
 
-  componentDidMount() {
+  componentDidMount = async () => {
     this.setState({ ...this.state, results: sampleData.foodTrucks });
-  }
+  };
 
   renderResults() {
     if (this.state.searchInput.length > 0 && this.state.results.length > 0) {

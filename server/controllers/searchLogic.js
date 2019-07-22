@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const turf = require('@turf/turf');
-const { foodTrucks } = require('../assets/sampleData.json');
 const FoodTruck = mongoose.model('FoodTruck');
 
 // /api/search?lat=124123&long=324322&rad=5
@@ -10,8 +9,12 @@ exports.search = async (req, res) => {
     let radius = req.query.rad;
     let options = { units: 'miles' };
 
-    let result = foodTrucks.filter(({ lat, long }) => {
-      let foodTruck = turf.point([parseFloat(lat), parseFloat(long)]);
+    const foodTrucks = await FoodTruck.find({});
+    let result = foodTrucks.filter(truck => {
+      let foodTruck = turf.point([
+        parseFloat(truck.location.coordinates[0]),
+        parseFloat(truck.location.coordinates[1])
+      ]);
       return turf.distance(userLocation, foodTruck, options) <= radius;
     });
     res.send(result);
