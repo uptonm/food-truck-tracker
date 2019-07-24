@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import '../assets/styles/searchBar.css';
 import sampleData from '../assets/sampleData.json';
 import SearchIcon from './SearchIcon';
-import axios from 'axios';
 
 class SearchBar extends Component {
   state = {
@@ -13,10 +12,9 @@ class SearchBar extends Component {
     filteredResults: []
   };
 
-  componentDidMount = async()=> {
-    const {data}=await axios.get(`http://localhost:8000/api/search?lat=42.337109&long=-71.097794&rad=5`);
-    this.setState({ ...this.state, results: data });
-  }
+  componentDidMount = async () => {
+    this.setState({ ...this.state, results: sampleData.foodTrucks });
+  };
 
   renderResults() {
     if (this.state.searchInput.length > 0 && this.state.results.length > 0) {
@@ -26,7 +24,8 @@ class SearchBar extends Component {
             return (
               <li className="searchBar-result" key={index}>
                 <h1 className="searchBar-result-info">
-                  <span className="searchBar-result-name">{result.name}</span>
+                  <span className="searchBar-result-name">{result.name}</span> -{' '}
+                  {result.location}
                 </h1>
               </li>
             );
