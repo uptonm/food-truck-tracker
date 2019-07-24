@@ -1,3 +1,6 @@
+// This class handles all of the logic for logging in and signing up,
+// All passwords are hashed with a json-web-token before reaching the
+// Database, and this token is used for making authenticated requests
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 

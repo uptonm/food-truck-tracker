@@ -1,3 +1,6 @@
+// This class serves to handle logic for searching for food trucks within a certain
+// radius to the user's location, using the turf library to calculate the distance
+// between the user and the truck via latitude and longitude
 const mongoose = require('mongoose');
 const turf = require('@turf/turf');
 const FoodTruck = mongoose.model('FoodTruck');
@@ -23,6 +26,19 @@ exports.search = async (req, res) => {
       error: {
         message: 'The following parameters are required for this route',
         parameters: ['lat', 'long', 'rad']
+      }
+    });
+  }
+};
+
+exports.searchOne = async (req, res) => {
+  const exists = await FoodTruck.findById(req.params.id);
+  if (exists) {
+    res.send(exists);
+  } else {
+    res.status(404).send({
+      error: {
+        message: 'Truck Not Found'
       }
     });
   }

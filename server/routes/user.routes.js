@@ -1,3 +1,4 @@
+// This class handles the logic for creating, viewing, updating, and deleting a user from the database
 const express = require('express');
 const actions = require('../controllers/userLogic');
 const router = express.Router();

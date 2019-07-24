@@ -1,3 +1,4 @@
+// This class handles the routing for authentication via sign-up/log-in
 const express = require('express');
 const passport = require('passport');
 const actions = require('../controllers/authLogic');

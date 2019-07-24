@@ -6,23 +6,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 2rem 15rem;
 }
 
 .searchBar-container {
   position: relative;
   width: 100%;
-}
-
-.searchBar-icon {
-  position: absolute;
-  top: 1rem;
-  left: 1.25rem;
-  height: 2rem;
-}
-
-.searchBar-icon path {
-  transition: all 0.25s;
 }
 
 .searchBar-input {
@@ -31,9 +19,8 @@
   border-bottom: 1px solid #5333ff;
   background-color: rgba(255, 255, 255, 0.8);
   height: 4rem;
-  width: 100%;
   font-size: 2.5rem;
-  padding: 1rem 1rem 0.75rem 4rem;
+  padding: 1rem 1rem 0.75rem 1rem;
 }
 .searchBar-input:focus {
   outline: none;
@@ -68,4 +55,41 @@
 
 .searchBar-result-name {
   font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.searchBar-input-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70vw;
+  margin: auto;
+  padding: 2rem;
+}
+
+.input-distance {
+  padding-left: 1rem;
+}
+
+.btn {
+  border: none;
+  width: 7.5rem;
+  background-color: #5333ff;
+  color: white;
+  transition: all 0.25s;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #2600ff;
+}
+
+.loading-text {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
 }

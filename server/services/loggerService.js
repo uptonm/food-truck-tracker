@@ -1,3 +1,4 @@
+// This class handles basic logging and formatting in the terminal
 const colors = require('colors');
 exports.msg = msg => {
   let d = new Date().toLocaleTimeString();

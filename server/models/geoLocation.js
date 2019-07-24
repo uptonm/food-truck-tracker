@@ -1,3 +1,5 @@
+// This class enforces a standard to the GeoLocation Model on the database,
+// This implements the Geo-Json Point Schema
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 

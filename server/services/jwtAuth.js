@@ -1,3 +1,4 @@
+// This class handles the logic for creating a user model and returing a json-web-token using the passport library
 const passport = require('passport');
 const localStrategy = require('passport-local').Strategy;
 const JWTstrategy = require('passport-jwt').Strategy;
