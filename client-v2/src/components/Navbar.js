@@ -1,3 +1,4 @@
+// This class serves to let user's navigate to the home page, and eventually to the sign-up/login page
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -11,13 +12,6 @@ class Navbar extends Component {
         <Link className="nav-logo" to="/">
           <img src={logo} alt="logo" className="navbar-logo" />
         </Link>
-        <ul className="nav-list">
-          <li className="nav-list-item">
-            <Link className="nav-link" to="/sign-in">
-              Sign In
-            </Link>
-          </li>
-        </ul>
       </div>
     );
   }

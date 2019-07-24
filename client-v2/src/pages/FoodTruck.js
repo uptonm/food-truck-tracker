@@ -8,6 +8,7 @@ class FoodTruck extends Component {
     truck: {}
   };
 
+  // On loading, this fetches the current route's food truck info and displays it on the screen
   componentDidMount = async () => {
     const truck = await axios.get(
       `http://localhost:8000/api/search/${this.props.match.params.id}`
@@ -15,6 +16,7 @@ class FoodTruck extends Component {
     this.setState({ ...this.state, truck: truck.data });
   };
 
+  // Render the truck location as a pointer on a map using the Google Maps API
   renderMap() {
     if (this.state.truck.location) {
       return (
@@ -38,6 +40,7 @@ class FoodTruck extends Component {
     }
   }
 
+  // Render the truck's info on the info panel
   renderInfo() {
     if (this.state.truck.location) {
       return (
@@ -51,6 +54,7 @@ class FoodTruck extends Component {
     }
   }
 
+  // Render the above logic and styling to the DOM
   render() {
     return (
       <div className="panel-container">
@@ -63,6 +67,7 @@ class FoodTruck extends Component {
   }
 }
 
+// Serves as the pointer being displayed on the map, with a prop of text for the name of the food truck
 const AnyReactComponent = ({ text }) => (
   <div
     style={{

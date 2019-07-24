@@ -1,3 +1,4 @@
+// Handles routing/rendering for the entire website, as well as the navbar
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 

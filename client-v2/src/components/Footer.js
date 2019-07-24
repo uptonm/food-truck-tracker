@@ -1,3 +1,4 @@
+// This class serves as the footer text for the web application
 import React from 'react';
 
 import '../assets/styles/footer.css';

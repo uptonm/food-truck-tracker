@@ -1,3 +1,4 @@
+// This class is a higher order component used for fetching the user's current location through the browser
 import React from 'react';
 import { geolocated } from 'react-geolocated';
 import SearchBar from './SearchBar';

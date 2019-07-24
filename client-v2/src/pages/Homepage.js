@@ -1,3 +1,4 @@
+// Serves as the homepage rendering the searchbar to the DOM when the user's geolocation is aquired.
 import React from 'react';
 import '../assets/styles/homepage.css';
 import GeoLocated from '../components/GeoLocated';

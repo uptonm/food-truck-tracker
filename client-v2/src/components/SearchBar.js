@@ -1,3 +1,4 @@
+// This class handles the logic for fetching food trucks within a certain radius (default: 5 miles)
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -14,6 +15,8 @@ class SearchBar extends Component {
     filteredResults: []
   };
 
+  // When the class is shown on the screen, fetch the user's location from the props
+  // then fetch the food trucks within a radius of that location
   componentDidMount = () => {
     this.setState({
       ...this.state,
@@ -24,6 +27,8 @@ class SearchBar extends Component {
     this.filterResults();
   };
 
+  // If the user's location is updated, fetch new results, and filter them based on the
+  // search input text
   componentWillReceiveProps = () => {
     this.setState({
       ...this.state,
@@ -34,6 +39,7 @@ class SearchBar extends Component {
     this.filterResults();
   };
 
+  // Fetch the food truck information from the backend-api
   fetchFoodTrucks = async () => {
     const { data } = await axios.get(
       `http://localhost:8000/api/search?lat=${this.state.lat}&long=${
@@ -43,6 +49,7 @@ class SearchBar extends Component {
     this.setState({ ...this.state, results: data });
   };
 
+  // Render the searchbar results, or a message if there are no results for a given input
   renderResults() {
     if (
       this.state.searchInput.length > 0 &&
@@ -81,6 +88,7 @@ class SearchBar extends Component {
     }
   }
 
+  // Filter the food-truck results based on the input text
   filterResults() {
     this.setState({
       ...this.state,
@@ -92,6 +100,7 @@ class SearchBar extends Component {
     });
   }
 
+  // Handle the controlled search input, updating state as it is modified
   handleSearchInput(e) {
     this.setState(
       { ...this.state, searchInput: e.target.value },
@@ -99,6 +108,7 @@ class SearchBar extends Component {
     );
   }
 
+  // Handle the controlled radius input, updating state as it is modified
   handleRangeInput(e) {
     this.setState({
       ...this.state,
@@ -106,12 +116,14 @@ class SearchBar extends Component {
     });
   }
 
+  // Handle the search button, fetching and filtering new results when it is clicked
   handleSearchButton() {
     console.log('ran');
     this.fetchFoodTrucks();
     this.filterResults();
   }
 
+  // Render the result of all the above logic and styling to the DOM
   render() {
     return (
       <div className="searchBar">
