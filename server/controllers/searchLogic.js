@@ -27,3 +27,16 @@ exports.search = async (req, res) => {
     });
   }
 };
+
+exports.searchOne = async (req, res) => {
+  const exists = await FoodTruck.findById(req.params.id);
+  if (exists) {
+    res.send(exists);
+  } else {
+    res.status(404).send({
+      error: {
+        message: 'Truck Not Found'
+      }
+    });
+  }
+};

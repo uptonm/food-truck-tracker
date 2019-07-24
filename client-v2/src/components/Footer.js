@@ -6,8 +6,8 @@ export default () => {
   return (
     <div className="footer">
       <h1 className="footer-text">
-        <i class="fal fa-code" /> with <i class="fal fa-heart" /> by Jason
-        Saturno & Michael Upton
+        <i className="fal fa-code" /> with <i className="fal fa-heart" /> by
+        Jason Saturno & Michael Upton
       </h1>
     </div>
   );
