@@ -1,3 +1,4 @@
+// This class serves to handle the logic pertaining to creating, viewing and deleting food trucks
 const mongoose = require('mongoose');
 const FoodTruck = mongoose.model('FoodTruck');
 const User = mongoose.model('User');

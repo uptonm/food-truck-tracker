@@ -1,3 +1,4 @@
+// This class handles the logic behind creating, viewing, updating, and deleting user accounts
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const geoLocation = require('../models/geoLocation');

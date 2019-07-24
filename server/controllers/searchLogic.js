@@ -1,3 +1,6 @@
+// This class serves to handle logic for searching for food trucks within a certain
+// radius to the user's location, using the turf library to calculate the distance
+// between the user and the truck via latitude and longitude
 const mongoose = require('mongoose');
 const turf = require('@turf/turf');
 const FoodTruck = mongoose.model('FoodTruck');

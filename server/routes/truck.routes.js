@@ -1,3 +1,4 @@
+// This class handles the logic for creating, viewing, updating and deleting a food truck from the database
 const express = require('express');
 const actions = require('../controllers/truckLogic');
 const router = express.Router();

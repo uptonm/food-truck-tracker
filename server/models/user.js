@@ -1,3 +1,5 @@
+// This class enforces a standard to the User Model on the database
+// it also handles hashing and salting of passwords before they enter the database
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const GeoLocation = require('./geoLocation');

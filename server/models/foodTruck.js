@@ -1,3 +1,4 @@
+// This class enforces a standard to the FoodTruck Model on the database
 const mongoose = require('mongoose');
 const GeoLocation = require('./geoLocation');
 const { Schema } = mongoose;
