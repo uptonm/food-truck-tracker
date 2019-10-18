@@ -4,6 +4,7 @@
   "description": "Final Project for Web Development Course at Wentworth Institute of Technology",
   "main": "index.js",
   "scripts": {
+    "start": "node ./server",
     "dev": "nodemon ./server"
   },
   "repository": {
